@@ -2,7 +2,7 @@
 
 List of alias and functions to to be more easy to work with kubectl.
 
-```
+```bash
 alias k="kubectl "
 ns_set(){
   echo "current NS $1"
@@ -19,8 +19,12 @@ pod_get(){
   k get pods -n $NS
 }
 
-pod_creatte(){
-   echo "Create pod: $@ -n $NS"
+pod_create_yaml(){
+  pod_create --dry-run=client -o yaml $@
+}
+
+pod_create(){
+   echo "#Create pod: $@ -n $NS"
    k run --restart=Never  -n $NS $@
 }
 
