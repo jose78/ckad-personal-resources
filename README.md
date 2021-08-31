@@ -1,5 +1,12 @@
 # ckad-personal-resources
+load specific version ov kubectl for linux:
 
+```bash
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.21.1/bin/linux/amd64/kubectl
+```
+
+
+Down
 List of alias and functions to to be more easy to work with kubectl.
 
 ```bash
