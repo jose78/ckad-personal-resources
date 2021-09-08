@@ -6,38 +6,38 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.21.1/bin/l
 ```
 
 
+Completion:
+
+```
+kubectl completion bash | sed s/kubectl/k/g >/etc/bash_completion.d/kubectl
+alias k='printf "\n\n" && cat ~/.kube/config | grep "current-context:" --color&& printf "\n"  && kubectl'
+complete -F __start_kubectl k
+```
+
 Down
 List of alias and functions to to be more easy to work with kubectl.
 
 ```bash
-alias k="kubectl "
-ns_set(){
-  echo "current NS $1"
-  export NS=$1
-}
-ns_create(){
- export NS=$1
- echo "Creating ns $1 $NS"
- k create ns $1
+
+export OUT=" --dry-run=client -o yaml "
+export DEL="  --grace-period=0 --force "
+
+
+function k_pod(){ 
+  echo "pod name: $1"
+  echo "pod image: $2"
+  echo "out to file $3"
+  cat ~/.kube/config | grep "current-context:" --color
+        kubectl run $1 --image=$2  --restart=Never $OUT > $3
 }
 
-pod_get(){
-  echo "namespace:$NS"
-  k get pods -n $NS
-}
-
-pod_create_yaml(){
-  pod_create --dry-run=client -o yaml $@
-}
-
-pod_create(){
-   echo "#Create pod: $@ -n $NS"
-   k run --restart=Never  -n $NS $@
-}
-
-describe(){
-   echo "namespace:$NS"
-   k describe -n $NS $@
+function k_pod_sh(){
+  echo "pod name: $1"
+  echo "pod image: $2"
+  echo "pod sh command: $4"
+  echo "out to file $3"
+  cat ~/.kube/config | grep "current-context:" --color
+  kubectl run $1 --image=$2  --restart=Never $OUT -- /bin/sh -c "$4" > $3
 }
 
 ```
