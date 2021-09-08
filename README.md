@@ -28,7 +28,7 @@ function k_pod(){
   echo "pod image: $2"
   echo "out to file $3"
   cat ~/.kube/config | grep "current-context:" --color
-        kubectl run $1 --image=$2  --restart=Never $OUT > $3
+  kubectl run $1 --image=$2  --restart=Never $OUT > $3
 }
 
 function k_pod_sh(){
