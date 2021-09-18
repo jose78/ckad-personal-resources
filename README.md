@@ -38,6 +38,6 @@ ctrl+b :resize-pane -D 15  -> reduce the current section
 Utilities:
 ```bash
 
-k get events --all-namespaces | grep -iv node      # Show the modiofications related with all objects except Nodes. 
+k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofications related with all objects except Nodes. 
 
 ```
