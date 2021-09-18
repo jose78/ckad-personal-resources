@@ -8,7 +8,7 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.21.1/bin/l
 
 Completion:
 
-```
+```bash
 echo 'source <(kubectl completion bash | sed s/kubectl/k/g)' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
@@ -24,5 +24,19 @@ export DEL="  --grace-period=0 --force "
 alias create="k create --record -f "
 alias context="k config set-context --current --namespace "
 
+```
+TMUX
+
+```bash
+ctrl+b+shift+2  -> create new subStection
+ctrl+b :resize-pane -D 15  -> reduce the current section
+
+```
+
+
+Utilities:
+```bash
+
+k get events --all-namespaces | grep -iv node      # Show the modiofications related with all objects except Nodes. 
 
 ```
