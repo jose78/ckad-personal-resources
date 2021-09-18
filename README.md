@@ -19,6 +19,7 @@ List of alias and functions to to be more easy to work with kubectl.
 
 ```bash
 
+export CMD=" -- /bin/sh -c "
 export OUT=" --dry-run=client -o yaml "
 export DEL="  --grace-period=0 --force "
 alias create="k create --record -f "
