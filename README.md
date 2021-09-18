@@ -9,9 +9,9 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.21.1/bin/l
 Completion:
 
 ```
-kubectl completion bash | sed s/kubectl/k/g >/etc/bash_completion.d/kubectl
-alias k='printf "\n\n" && cat ~/.kube/config | grep "current-context:" --color&& printf "\n"  && kubectl'
-complete -F __start_kubectl k
+echo 'source <(kubectl completion bash | sed s/kubectl/k/g)' >>~/.bashrc
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
 ```
 
 Down
@@ -21,23 +21,8 @@ List of alias and functions to to be more easy to work with kubectl.
 
 export OUT=" --dry-run=client -o yaml "
 export DEL="  --grace-period=0 --force "
+alias create="k create --record -f "
+alias context="k config set-context --current --namespace "
 
-
-function k_pod(){ 
-  echo "pod name: $1"
-  echo "pod image: $2"
-  echo "out to file $3"
-  cat ~/.kube/config | grep "current-context:" --color
-  kubectl run $1 --image=$2  --restart=Never $OUT > $3
-}
-
-function k_pod_sh(){
-  echo "pod name: $1"
-  echo "pod image: $2"
-  echo "pod sh command: $4"
-  echo "out to file $3"
-  cat ~/.kube/config | grep "current-context:" --color
-  kubectl run $1 --image=$2  --restart=Never $OUT -- /bin/sh -c "$4" > $3
-}
 
 ```
