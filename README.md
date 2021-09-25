@@ -41,3 +41,7 @@ Utilities:
 k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofications related with all objects except Nodes. 
 
 ```
+
+
+Links:
+  [kubectl cheatsheet]https://kubernetes.io/docs/reference/kubectl/cheatsheet/
