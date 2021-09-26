@@ -1,5 +1,5 @@
 # ckad-personal-resources
-load specific version ov kubectl for linux:
+load specific version of kubectl (1.21) for linux:
 
 ```bash
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.21.1/bin/linux/amd64/kubectl  && chmod +x kubectl && mv kubectl /usr/bin 
