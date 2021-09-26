@@ -28,14 +28,14 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
 ```
 
 
-Links:
+###Links:
   * [TMUX](https://tmuxcheatsheet.com/)
   * [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   * [Be faster](https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)
   * [Tips and complex exercises](https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681)
   * [Some exercisaes in katakoda](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn)
 
-Little tips:
+### Little tips:
 
 *  For your convenience, all environments, in other words, the base system and the cluster nodes, have the following additional command-line tools pre-installed and pre-configured:
 
