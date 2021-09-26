@@ -77,7 +77,7 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
 
    *  Demonstrate basic understanding of NetworkPolicies
    *  Provide and troubleshoot access to applications via services
-   *  [Use Ingress rules to expose applications](https://kubernetes.io/docs/concepts/services-networking/ingress/#default-backend)
+   *  [Use Ingress rules to expose applications](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules)
 
  * Application Observability and Maintenance – 15%
 
