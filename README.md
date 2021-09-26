@@ -6,19 +6,12 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.21.1/bin/l
 ```
 
 
-Completion:
+List of Completion, aliases and exports to be more faster:
 
 ```bash
 echo 'source <(kubectl completion bash | sed s/kubectl/k/g)' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
-```
-
-Down
-List of alias and functions to to be more easy to work with kubectl.
-
-```bash
-
 export CMD=" -- /bin/sh -c "
 export OUT=" --dry-run=client -o yaml "
 export DEL="  --grace-period=0 --force "
@@ -26,14 +19,6 @@ alias create="k create --record -f "
 alias context="k config set-context --current --namespace "
 
 ```
-TMUX
-
-```bash
-ctrl+b+shift+2  -> create new subStection
-ctrl+b :resize-pane -D 15  -> reduce the current section
-
-```
-
 
 Utilities:
 ```bash
@@ -44,6 +29,7 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
 
 
 Links:
+  * [TMUX](https://tmuxcheatsheet.com/)
   * [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   * [Be faster](https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)
   * [Tips and complex exercises](https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681)
