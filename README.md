@@ -46,3 +46,4 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
 Links:
   * [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   * [Be faster](https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)
+  * [Tips and complex exercises](https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681)
