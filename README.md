@@ -17,6 +17,7 @@ export OUT=" --dry-run=client -o yaml "
 export DEL="  --grace-period=0 --force "
 alias create="k create --record -f "
 alias context="k config set-context --current --namespace "
+alias cat='pygmentize -g'
 
 ```
 
