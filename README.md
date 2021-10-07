@@ -62,7 +62,7 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
 
    *  Discover and use resources that extend Kubernetes (CRD)
    *  Understand authentication, authorization and admission control
-   *  Understanding and defining resource requirements, limits and quotas
+   *  Understanding and defining resource requirements, limits and [quotas](https://katacoda.com/pso-sander-van-vugt/scenarios/sander-cka-quota)
    *  Understand ConfigMaps
    *  Create & consume Secrets
    *  Understand ServiceAccounts
