@@ -89,3 +89,8 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
    *  Debugging in Kubernetes
 
 
+
+
+### External resources:
+ 
+  * [multiple scenarios of katacoda to cover some points](https://katacoda.com/pso-sander-van-vugt)
