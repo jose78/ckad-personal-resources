@@ -70,7 +70,7 @@ k get events --all-namespaces -w -o wide | grep -iv node      # Show the modiofi
 
  * Application Deployment – 20% 
 
-   *  Use Kubernetes primitives to implement common deployment strategies (e.g. blue/green or canary)
+   *  [Use Kubernetes primitives to implement common deployment strategies (e.g. blue/green or canary)](https://harness.io/blog/blue-green-canary-deployment-strategies/)
    *  Understand Deployments and how to perform rolling updates
    *  Use the Helm package manager to deploy existing packages
 
