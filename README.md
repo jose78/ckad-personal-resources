@@ -11,6 +11,7 @@ List of Completion, aliases and exports to be more faster:
 ```bash
 echo 'source <(kubectl completion bash | sed s/kubectl/k/g)' >>~/.bashrc
 echo 'source <(helm completion bash)' >>~/.bashrc
+echo 'source <(podman completion bash)' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
 export CMD=" -- /bin/sh -c "
